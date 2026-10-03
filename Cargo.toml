@@ -1,0 +1,16 @@
+[package]
+name = "dm-plugin-hello"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.99.0"
+publish = false
+license = "MIT"
+repository = "https://github.com/guangl/dm-plugin-template"
+readme = "README.md"
+
+[[bin]]
+name = "dm-hello"
+path = "src/main.rs"
+
+[dependencies]
+dm-plugin-sdk = { version = "0.4.1", git = "https://github.com/guangl/dm-plugin-sdk.git", rev = "b12ce0d937e2f732151b30a1850e08ed4e5c9cf9" }
