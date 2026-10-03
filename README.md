@@ -32,7 +32,7 @@ Windows 使用 `dm-hello.exe`。直接运行 binary 缺少宿主协议环境时�
 
 ## 独立发布
 
-所有修改经功能分支、PR、CI 和维护者合并确认。同步 crate 与清单版本，确认后在合并提交创建对应的 `vX.Y.Z` 标签；Release workflow 验证版本并运行 CI，再发布六个平台安装包及 SHA-256。GNU Linux 使用 glibc 2.28，musl 提供独立归档。Git 仓库安装所需的原始二进制及 SHA-256 也会发布。
+所有修改经功能分支、PR、CI 和维护者合并确认。同步 crate 与清单版本，确认后在合并提交创建对应的 `vX.Y.Z` 标签；Release workflow 验证版本并运行 CI，再发布九个平台安装包及 SHA-256（x86_64/ARM64 GNU 与 musl Linux、ARMv7 GNU Linux、Apple Silicon 与 Intel macOS、x86_64 与 ARM64 Windows）。GNU Linux 使用 glibc 2.28，musl 提供独立归档。Git 仓库安装所需的原始二进制及 SHA-256 也会发布。
 
 正式 Release 发布后，用户可以使用 `dm install https://github.com/<owner>/<repository>.git --rev vX.Y.Z`，或下载、校验并解压安装包，再通过 `dm install <包目录> --release-source <owner>/<repository> --release-tag vX.Y.Z` 安装。
 
